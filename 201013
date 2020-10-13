@@ -1,0 +1,29 @@
+## List Comprehension
+
+- 리스트를 코드 한줄로 간단하게 만드는 방법
+
+```python
+# 순차적인 리스트
+ary = [ num for num in range(20) ]
+
+# 랜덤한 리스트
+ary2 = [random.randint(0, 255) for _ in range(20)]
+```
+
+## List Slicing
+
+- lst[0:1]과 lst[0]의 차이는?
+    - lst[0:1]은 list형태로 return
+    - lst[0]은 값 하나로 return
+- lst = [ 10, 20, 30 ] 일때 lst = [ 10, 11, 20, 30]으로 바꿔라
+    - lst[0:1] = [10,11] (O)
+    - lst[0] = [10, 11]  (X)
+- list에 list를 대입하는 경우
+    - `list2 = list`
+    - 메모리를 공유하기 때문에 list2의 값을 변경하면 list1의 값도 변경된다
+
+    ⭐ 함수 파라미터 값을 넘길때 리스트에 변형이 오기 때문에 주의 ⭐
+
+- 메모리 공간도 복사하는 2가지 방법
+    - `new = old[:]`
+    - `new = old.copy()`
